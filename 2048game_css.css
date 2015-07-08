@@ -20,7 +20,7 @@ display: inline-block;
   border-radius: 10px;
   background: grey;
   border: 3px solid white;
-  float: right;
+  /*float: right; */
   margin-top: 20px;
   margin-right: 40px;
 }
