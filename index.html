@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <title>2048 game</title>
@@ -10,8 +11,8 @@
 </head>
 <body onload="newGame()">
 <div class="row">
-  <div class="col-xs-2 col-md-4"></div>
-  <div class="col-xs-8 col-md-4"><h1 align="left" class="header inline">2048</h1>  
+  <div class="col-xs-6 col-md-4"></div>
+  <div class="col-xs-12 col-md-4"><h1 align="left" class="header inline">2048</h1>  
   <div class="btndefault inline">
   <h5 class="textinside" align="center">SCORE</h5>
   <p align="center" class="textinside" id="score">0</p>
@@ -22,10 +23,11 @@
   Join the numbers and get to the <b>2048 tile!</b></p>
   </div>
   <div class="inline" align="right">
-  <input type="Submit" class="btnrestart" onclick="newGame();" value="New Game"><h5 class = "textinside">New Game</h5></input>
+  <input type="Submit" class="btnrestart" onclick="newGame();" value="New Game"></input>
   </div>
  <br><br>
- <div id="division"></div>  
+
+ <div id="division" class="container"></div>  
  <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -40,7 +42,7 @@
     </div>
   </div>
 </div>
- <div class="col-md-4"></div>
+ <div class="col-xs-6 col-md-4"></div>
 </div>
 </body>
 </html>
