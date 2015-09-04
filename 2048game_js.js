@@ -1,8 +1,10 @@
+
 var arr = new Array(4);
 var scr=$("#score");
  for(var i=0; i<4; i++){
 	 arr[i]=new Array(4);
  }
+ 
  function newGame(){
 	$('#myModal').modal('hide');
 	for(var i=0; i<4; i++){
@@ -13,6 +15,12 @@ var scr=$("#score");
  }
  randomnumbergenerator();
 }
+$(document).ready(function(){
+	$(window).on( "load", newGame );
+	$( "#mybtn" ).on( "click", newGame );
+	$( "#trybtn" ).on( "click", newGame );
+});
+
 function randomnumbergenerator()
 {
  var rannum=Math.random();
@@ -34,7 +42,7 @@ function randomnumbergenerator()
 	   
  }
  arr[Math.floor(x/4)][x%4]=ranval;
- arr[Math.floor(y/4)][y%4]=2;
+ arr[Math.floor(y/4)][y%4]=ranval;
   
  draw();
 }
@@ -88,9 +96,9 @@ function draw(){
 		s.push('</div>');	
 		
 	}	
-	
 	document.getElementById("division").innerHTML= s.join('');		
 	}
+	
 function up(){
 	for(var j=0; j<=3; j++){
 		  for(var i=0; i<=3; i++){
@@ -227,6 +235,7 @@ function right(){
 		  }
 	  }
 }
+
 $(document).keydown(function(e) {
 	var initial = JSON.parse(JSON.stringify(arr));
 	console.log(initial);
@@ -250,6 +259,11 @@ $(document).keydown(function(e) {
   }
   losingcondition();
 });
+
+$(document).on("swipe", function(e) {
+console.log(e);
+});
+
 function arraycompare(initial, actual){
 	console.log("initial:" + initial);
 	console.log("actual:" + actual);
@@ -336,7 +350,7 @@ function losingconditioncheck(){
 				if (i+1 <= 3 && initial[i][j] == initial[i+1][j]) {
 				  initial[i][j] = 2 * initial[i][j];
 				  initial[i+1][j] = 0;
-				  scr=parseInt(scr)+initial[i][j];
+				  //scr=parseInt(scr)+initial[i][j];
 			  }
 		  }
 	  }
@@ -371,7 +385,7 @@ function losingconditioncheck(){
 				if (i-1 >= 0 && initial[i][j] == initial[i-1][j]) {
 				  initial[i][j] = 2 * initial[i][j];
 				  initial[i-1][j] = 0;
-				  scr=parseInt(scr)+initial[i][j];
+				  //scr=parseInt(scr)+initial[i][j];
 			  }
 		  }
 	  }
@@ -406,7 +420,7 @@ function losingconditioncheck(){
 				if (initial[i][j] == initial[i][j+1]) {
 				  initial[i][j] = 2 * initial[i][j];
 				  initial[i][j+1] = 0;
-				  scr=parseInt(scr)+initial[i][j];
+				  //scr=parseInt(scr)+initial[i][j];
 			  }
 		  }
 	  }
@@ -440,13 +454,16 @@ function losingconditioncheck(){
 
 				if (initial[i][j] == initial[i][j-1]) {
 				  initial[i][j] = 2 * initial[i][j];
-				  scr=parseInt(scr)+initial[i][j];
+				  //scr=parseInt(scr)+initial[i][j];
 				  initial[i][j-1] = 0;
 			  }
 		  }
 	  }
   }
   if(initial.toString() === arr.toString()) {
+	   document.getElementById("gamedecision").innerHTML = "Game Over!";
+	   var scoredivel=document.getElementById("scorediv");
+	   scorediv.innerHTML="Your score is "+scr;
 	   $('#myModal').modal('show');
 	}
 	
