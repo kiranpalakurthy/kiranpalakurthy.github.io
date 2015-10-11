@@ -1,0 +1,239 @@
+body {
+    background-color: #262523!important;
+	
+}
+.firstdiv{
+ max-width: 850px;
+ margin: 0 auto!important;
+ 
+ }
+ 
+ .firstimagediv{
+
+ background-image: url('images/silk-bg.jpg');
+ 
+ background-repeat: repeat-x;
+ position: relative;
+
+ /*height: 200%;*/
+ 
+ 
+ }
+ .profilepicture{
+ 
+ /*margin-bottom: 130px;*/ 
+ /*margin-top: -130px;*/
+ /*height: 220px;
+ width: 220px;*/
+ /*width: 100%;
+ height: auto;*/
+ border-radius: 50%;
+ 
+ 
+ }
+ .profilename{
+ margin-top: 40px;
+ text-align: center;
+ font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+ /*font-size: 60px;*/
+ font-size: 4.5em;
+ 
+ 
+ }
+ .icons{
+    background-image:url('images/nav-background.gif');
+	background-repeat: repeat;
+	/*height: 120px;*/
+	
+ }
+ul{
+    list-style-type: none;
+}
+li{
+ float: left;
+}
+a{
+  
+   display: block;
+   padding: 10px 0px;
+   /*width: 160px;*/
+    font-size: 25px;
+    text-align: center;
+    color: #5b5955 !important;
+    text-decoration: none;
+}
+a:hover {
+	color: white !important;
+	text-decoration: none !important;}
+.icon{
+text-align: center;
+margin: auto auto;
+padding: 10px 0px;
+vertical-align: middle;
+/*font-size: 45px;*/
+font-size: 2em;
+
+}
+.icontext{
+
+text-decoration: none !important;
+font-family: futura-pt, Futura, "Helvetica Neue", Helvertica, Arial, sans-serif;
+font-weight: bold;
+letter-spacing: 2px;
+color: #fff;}
+.info{
+  height: 285px;
+  background-image:url('images/silk-bg.jpg');
+   background-repeat: repeat repeat;
+ }
+ .infodivimage{
+ height: 350px;
+ padding: 0px !important;
+ position: relative;
+ }
+ .aboutme{
+	text-align: center;
+	
+ }
+
+.work{
+background-image: url('images/silk-bg.jpg');
+ background-repeat: repeat repeat;
+ height: 750px;
+ padding: 50px 0;
+}
+.work_image{
+height: 300px;
+width: 300px;
+margin: 15px;
+border: 1px solid #5b5955;
+}
+.skills{
+
+/*height: 200px;*/
+/*background-image: url('http://kevinjohngomez.com/media/images/nav-background.gif'); */
+}
+.roundedimage{
+ border-radius: 50%;
+ float: left;
+ border: 2px solid #fff;
+ margin: auto 0px !important;
+/* height: 160px;
+ width: 160px;*/
+ /*margin: 20px 20px;*/
+
+ 
+}
+.skillname{
+ margin-top: 40%;
+ color: white;
+ text-align: center;
+ /*font-size: 1.5em;*/
+
+}
+.arrowmarks{
+display: block !important;}
+
+.skillstext{
+ color: white;
+ text-align: center;
+ padding: 8px 0px;
+}
+
+/* Custom, iPhone Retina */ 
+ @media only screen and (min-width : 320px) {
+	.profilepicture{
+        margin-top: -65px;
+		height: 150px;
+		width: 150px;
+    }
+	.profilename{
+		font-size: 2.0em;
+	}
+	.firstimagediv{
+		 height: 200px;
+		 margin-top: 100px;
+	}
+	.icon{
+		font-size: 1em;
+	}
+	a{
+	width: 40px;
+	}
+	.icontext{
+		font-size: 10px;
+	}
+	.icons{
+		height: 80px;
+	}
+	.roundedimage{
+		height: 60px;
+		width: 60px;
+		/*margin: 5px 5px;*/
+	}
+	.skillname{
+	font-size: 0.5em;
+	}
+	.skills{
+	height: 150px;}
+	}
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+	.profilepicture{
+       
+    }
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+	.profilepicture{
+        
+    }
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+	.profilepicture{
+       
+    }
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+	.profilepicture{
+        margin-top: -130px;
+		height: 220px;
+		width: 220px;
+    }
+	.profilename{
+		font-size: 4.5em;
+	}
+	.firstimagediv{
+		 height: 285px;
+		  margin-top: 200px;
+	}
+	.icon{
+		font-size: 2em;
+	}
+	a{
+	width: 160px;
+	}
+	.icontext{
+	font-size: 16px;
+	}
+	.icons{
+		height: 120px;
+	}
+	.roundedimage{
+		height: 160px;
+		width: 160px;
+		
+    }
+	.skillname{
+	font-size: 1.5em;
+	}
+	.skills{
+	height: 270px;}
+	}
+
